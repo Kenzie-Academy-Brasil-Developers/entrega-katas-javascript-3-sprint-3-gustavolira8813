@@ -16,70 +16,75 @@ function showResults(x){
 
 function kata1() {
     let result = ""
-    for(let i = 1; i <=25; i++){
+    for(let i = 1; i <25; i++){
         result +=  i + ', '
-        
+       
     }
-   showResults('katas 01: '+ result)
+    result += 25
+  return 'katas 01: '+ result
 }
-kata1()
+showResults(kata1())
 
 
 function kata2() {
     let result = ''
-    for(let i = 25; i >= 1; i--){
+    for(let i = 25; i > 1; i--){
         result += i + ', '
     }
-    showResults('Katas 02: ' + result)
+    result+=1
+    return 'Katas 02: ' + result
 }
-kata2()
+showResults(kata2())
 
 function kata3() {
     let result = ''
-    for(let i = 1; i <= 25; i++){
+    for(let i = 1; i < 25; i++){
         result += (i * -1) + ', '
     }
-    showResults('Katas 03: ' + result)
+    result += (25* -1)
+    return 'Katas 03: ' + result
 }
-kata3()
+showResults(kata3())
 
 function kata4() {
     let result = ''
-    for(let i = 25; i >= 1; i--){
+    for(let i = 25; i > 1; i--){
         result += (i * -1) + ', '
     }
-    showResults('Katas 04: ' + result)
+    result += (1 * -1)
+    return 'Katas 04: ' + result
 }
-kata4()
+showResults(kata4())
 
 function kata5() {
     let result =''
-    for(let i = -25; i <= 25; i++){
+    for(let i = -25; i < 25; i++){
         if(i % 2 === -1 || i % 2 === 1){
             result += i + ', '
         }
     }
-    showResults('Katas 05: ' + result)
+    result += 25
+    return 'Katas 05: ' + result
 }
-kata5()
+showResults(kata5())
 
 function kata6() {
     let result =''
     for(let i = 3; i <= 100; i+=3){
         result += i + ', '
     }
-    showResults('Katas 06: ' + result)
+    return 'Katas 06: ' + result
 }
-kata6()
+showResults(kata6())
 
 function kata7() {
     let result =''
     for(let i = 7; i <=100; i += 7){
         result += i + ', '
     }
-    showResults('Katas 07: ' + result)
+    return 'Katas 07: ' + result
 }
-kata7()
+showResults(kata7())
 
 function kata8() {
     let result = ''
@@ -88,27 +93,27 @@ function kata8() {
             result += i + ', '
         }
     }
-    showResults('Katas 08: ' + result)
+    return 'Katas 08: ' + result
 }
-kata8()
+showResults(kata8())
 
 function kata9() {
     let result = ''
     for(let i = 5; i <= 100; i = i + 10){
         result += i + ', '
     }
-    showResults('Katas 09: ' + result)
+    return 'Katas 09: ' + result
 }
-kata9()
+showResults(kata9())
 
 function kata10() {
     let result = ''
     for(let i = 0; i < sampleArray.length; i++){
         result +=  sampleArray[i] + ', '
     }
-    showResults('Katas 10: ' + result)
+    return 'Katas 10: ' + result
 }
-kata10()
+showResults(kata10())
 
 function kata11() {
     let result = ''
@@ -117,9 +122,9 @@ function kata11() {
             result +=  sampleArray[i] + ', '
         }
     }
-    showResults('Katas 11: ' + result)
+    return 'Katas 11: ' + result
 }
-kata11()
+showResults(kata11())
 
 function kata12() {
     let result = ''
@@ -128,9 +133,9 @@ function kata12() {
             result += sampleArray[i] + ', '
         }
     }
-    showResults('Katas 12: ' + result)
+    return 'Katas 12: ' + result
 }
-kata12()
+showResults(kata12())
 
 function kata13() {
     let result = ''
@@ -139,9 +144,9 @@ function kata13() {
         result += sampleArray[i] + ', '
         }
     }
-    showResults('Katas 13: ' + result)
+    return 'Katas 13: ' + result
 }
-kata13()
+showResults(kata13())
 
 function kata14() {
     let result = ''
@@ -149,27 +154,27 @@ function kata14() {
         result +=  sampleArray[i] * sampleArray[i] + ', '
     }
     
-    showResults('Katas 14: ' + result)
+    return 'Katas 14: ' + result
 }
-kata14()
+showResults(kata14())
 
 function kata15() {
     let soma = 0
     for(let i = 1; i <= 20; i++){
         soma += i
     }
-    showResults('Katas 15: ' + soma)
+    return 'Katas 15: ' + soma
 }
-kata15()
+showResults(kata15())
 
 function kata16() {
     let soma = 0
     for(let i = 0; i < sampleArray.length; i++){
         soma += sampleArray[i]
     }
-    showResults('katas 16: ' + soma)
+    return 'katas 16: ' + soma
 }
-kata16()
+showResults(kata16())
     
 function kata17() {
     let menor = 1000
@@ -178,9 +183,9 @@ function kata17() {
             menor = sampleArray[i]
         }
     }
-    showResults('Katas 17: ' + menor)
+    return 'Katas 17: ' + menor
 }
-kata17()
+showResults(kata17())
 
 function kata18() {
     let maior = 0 
@@ -189,9 +194,9 @@ function kata18() {
             maior =  sampleArray[i]
         }
     }
-    showResults('Katas 18: ' + maior)
+    return 'Katas 18: ' + maior
 }
-kata18()
+showResults(kata18())
 /**
  * Daqui em diante são os bônus, por sua conta e risco
  */
@@ -254,7 +259,7 @@ document.getElementsByClassName('blocos')[1].appendChild(titulo)
         let destino = document.getElementsByClassName('blocos')[1]
         destino.appendChild(bloco)
     }
-
+    
 }
 kataBonus2()
 
